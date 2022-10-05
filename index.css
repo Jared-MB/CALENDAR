@@ -1,0 +1,137 @@
+:root {
+	--darker: #222;
+	--dark: #333;
+	--purple-dark: #9333ea;
+	--purple: #a558f7;
+	--light: #ccc;
+	--rose: #f43f5e;
+	--rounded: 8px;
+}
+
+body {
+	background-color: var(--darker);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	padding: 1rem;
+	padding-top: 2rem;
+}
+
+.months {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 1rem;
+}
+
+#year {
+	color: var(--purple-dark);
+	font-weight: 600;
+	text-align: center;
+	font-size: 64px;
+	margin: 0;
+	margin-bottom: 2rem;
+}
+
+.month {
+	border: 1px solid var(--purple-dark);
+	background-color: var(--dark);
+	border-radius: var(--rounded);
+	display: flex;
+	flex-direction: column;
+	min-width: 20vw;
+	flex-grow: 1;
+	margin-bottom: 2rem;
+}
+
+header div {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	padding: .5rem;
+	place-items: center;
+	color: var(--purple-dark);
+	border-bottom: 1px solid var(--purple-dark);
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.month h2 {
+	margin: 0;
+	font-size: 24px;
+	color: var(--purple-dark);
+	font-weight: 500;
+	text-align: center;
+	padding: 1rem;
+	background-color: var(--purple-dark);
+	color: var(--light);
+	border-radius: var(--rounded) var(--rounded) 0 0;
+}
+
+.numbers {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: .8rem;
+	padding: 1rem;
+	border-radius: 0 0 var(--rounded) var(--rounded);
+	place-items: center;
+	color: var(--light);
+}
+
+#enero .numbers span:nth-child(1), #octubre .numbers span:nth-child(1) {
+	grid-column-start: 6;
+	grid-column-end: 7;
+}
+
+#febrero .numbers span:nth-child(1), #marzo .numbers span:nth-child(1), #noviembre .numbers span:nth-child(1) {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+#abril .numbers span:nth-child(1), #julio .numbers span:nth-child(1){
+	grid-column-start: 5;
+	grid-column-end: 6;
+}
+
+#mayo .numbers span:nth-child(1) {
+	grid-column-start: 7;
+	grid-column-end: 8;
+}
+
+#junio .numbers span:nth-child(1) {
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+
+#septiembre .numbers span:nth-child(1), #diciembre .numbers span:nth-child(1) {
+	grid-column-start: 4;
+	grid-column-end: 5;
+}
+
+.sunday {
+	color: var(--rose);
+}
+
+footer {
+	color: var(--purple-dark);
+	font-size: 12px;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-thumb{
+	background: #adadad;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #929292;
+}
+::-webkit-scrollbar-thumb:active {
+	background-color: #a0a0a0;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 4px;
+}
